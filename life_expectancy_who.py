@@ -30,8 +30,11 @@ linear = linear_model.LinearRegression()
 
 linear.fit(x_train,y_train)
 acc = linear.score(x_test,y_test)
-print(acc)
+print(acc) #stabilises to about 85%
+
+# print("Co: \n",linear.coef_)
+# print("Intercept: \n",linear.intercept_)
 
 predictions = linear.predict(x_test)
 for i in range(len(predictions)):
-    print('Country: {}; Predicted Life Expectancy: {:02f}, Actual Life Expectancy: {}. '.format(countries[i],predictions[i],y_test[i]))
+    print('Country: {}; Predicted Life Expectancy: {:.2f}, Actual Life Expectancy: {}. '.format(countries[i],predictions[i],y_test[i]))
