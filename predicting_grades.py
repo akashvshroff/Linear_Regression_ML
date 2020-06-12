@@ -17,7 +17,7 @@ x_train,x_test,y_train,y_test = sklearn.model_selection.train_test_split(x,y,tes
 linear = linear_model.LinearRegression()
 
 linear.fit(x_train,y_train)
-acc = linear.score(x_test,y_test) #gives the R^2 value i.e varianve of the value of the predictions
+acc = linear.score(x_test,y_test) #gives the R^2 value i.e variance of the value of the predictions
 print(acc) #stabilises at around 85%
 
 # print("Co: \n",linear.coef_)
